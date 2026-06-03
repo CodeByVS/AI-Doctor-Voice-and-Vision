@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY --from=frontend-builder /frontend/dist ./frontend/dist
 
 # Copy backend application package
-COPY backend/app/ ./backend/app/
+COPY backend/server/ ./backend/server/
 
 # Copy sample medical images (served by /api/samples endpoint)
 COPY acne.jpg skin_rash.jpg dandruff-optimized.webp ./
@@ -35,4 +35,4 @@ COPY api/ ./api/
 EXPOSE 7860
 
 # Launch FastAPI via uvicorn using the new module path
-CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "backend.server.main:app", "--host", "0.0.0.0", "--port", "7860"]

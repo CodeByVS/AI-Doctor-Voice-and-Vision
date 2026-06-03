@@ -10,5 +10,5 @@ if root_dir not in sys.path:
 if backend_dir not in sys.path:
     sys.path.append(backend_dir)
 
-from backend.app.main import app
+from backend.server.main import app
 

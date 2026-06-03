@@ -8,8 +8,8 @@ from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-# Adjust path dynamically to ensure app modules can be loaded from anywhere
-app_dir = os.path.dirname(os.path.abspath(__file__))  # backend/app
+# Adjust path dynamically to ensure server modules can be loaded from anywhere
+app_dir = os.path.dirname(os.path.abspath(__file__))  # backend/server
 backend_dir = os.path.dirname(app_dir)                # backend
 root_dir = os.path.dirname(backend_dir)                # root workspace
 
@@ -19,12 +19,12 @@ if root_dir not in sys.path:
     sys.path.append(root_dir)
 
 # Import configurations & services using absolute modular paths
-from app.core.config import TEMP_DIR, DIST_DIR, ALLOWED_SAMPLE_FILES, ROOT_DIR
-from app.core.prompts import SYSTEM_PROMPT
-from app.services.doctor_brain import analyze_image_with_query
-from app.services.speech_to_text import transcribe_with_groq
-from app.services.text_to_speech import text_to_speech_with_gtts
-from app.utils.helpers import encode_image, cleanup_files
+from server.core.config import TEMP_DIR, DIST_DIR, ALLOWED_SAMPLE_FILES, ROOT_DIR
+from server.core.prompts import SYSTEM_PROMPT
+from server.services.doctor_brain import analyze_image_with_query
+from server.services.speech_to_text import transcribe_with_groq
+from server.services.text_to_speech import text_to_speech_with_gtts
+from server.utils.helpers import encode_image, cleanup_files
 
 app = FastAPI(title="AI Doctor Portal", description="Web application for Voice & Vision AI Doctor")
 

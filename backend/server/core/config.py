@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # File paths
-# __file__ is backend/app/core/config.py
+# __file__ is backend/server/core/config.py
 CORE_DIR = os.path.dirname(os.path.abspath(__file__))
-APP_DIR = os.path.dirname(CORE_DIR)          # backend/app
-BACKEND_DIR = os.path.dirname(APP_DIR)       # backend
+SERVER_DIR = os.path.dirname(CORE_DIR)          # backend/server
+BACKEND_DIR = os.path.dirname(SERVER_DIR)       # backend
 ROOT_DIR = os.path.dirname(BACKEND_DIR)      # root workspace folder
 
 # Temporary directory for uploads & recording assets
