@@ -1,0 +1,74 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.Python
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ========================
+# Node / Frontend
+# ========================
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+
+# ========================
+# IDE & Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.settings/
+
+# ========================
+# OS artifacts
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Temp & Generated files
+# ========================
+temp/
+static/
+*.mp3
+*.wav
+*.webm
+
+# ========================
+# Pipenv lock (optional, some prefer to commit)
+# ========================
+# Pipfile.lock
+
+# ========================
+# Build artifacts
+# ========================
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+*.swf
+*.air
+*.ipa
+*.apk
